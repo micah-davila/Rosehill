@@ -1,142 +1,91 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and Typography */
+/* General styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
     color: #333;
 }
 
-/* Header */
+/* Header styles */
 header {
     background-color: #2b2b2b;
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
 }
 
-header .logo h1 {
-    font-size: 2.5em;
-    margin-bottom: 5px;
+header h1 {
+    margin: 0;
 }
 
-header .logo p {
+header p {
     font-size: 1.2em;
-    margin-bottom: 10px;
 }
 
-header nav ul {
+/* Navigation styles */
+nav {
+    background-color: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
     list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    padding: 0;
 }
 
-header nav ul li {
-    display: inline-block;
+nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-header nav ul li a {
-    text-decoration: none;
+nav ul li a {
     color: white;
+    text-decoration: none;
     font-size: 1.1em;
 }
 
-header nav ul li a:hover {
+nav ul li a:hover {
     color: #f39c12;
 }
 
-/* Hero Section */
-.hero {
-    background-image: url('guitar-background.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
+/* Main content styles */
+main {
     text-align: center;
-    padding: 100px 20px;
+    padding: 40px;
 }
 
-.hero h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-.hero .cta-button {
-    padding: 15px 30px;
-    background-color: #f39c12;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.hero .cta-button:hover {
-    background-color: #e67e22;
-}
-
-/* Product Section */
-.products {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
-}
-
-.products h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-}
-
-.product {
+.guitar {
     display: inline-block;
     margin: 20px;
-    width: 280px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.product img {
+.guitar img {
     width: 100%;
-    border-radius: 5px;
+    height: auto;
 }
 
-.product h3 {
-    font-size: 1.8em;
-    margin: 15px 0;
-}
-
-.product p {
-    font-size: 1em;
-    color: #666;
-}
-
-.product a {
-    text-decoration: none;
+.guitar h3 {
     color: #f39c12;
-    font-weight: bold;
-    font-size: 1.1em;
 }
 
-.product a:hover {
-    color: #e67e22;
+.guitar p {
+    color: #555;
 }
 
-/* Footer Section */
+/* Footer styles */
 footer {
     background-color: #2b2b2b;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+    padding: 10px;
 }
