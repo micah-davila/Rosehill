@@ -1,15 +1,22 @@
-// Simple FAQ toggle logic
+// Toggle FAQ visibility
 document.querySelectorAll('.faq-question').forEach(button => {
     button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        const isOpen = answer.style.display === 'block';
-        answer.style.display = isOpen ? 'none' : 'block';
+      const answer = button.nextElementSibling;
+      const isOpen = answer.style.maxHeight;
+  
+      document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+      document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
+  
+      if (!isOpen) {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        button.classList.add('open');
+      }
     });
-});
-
-// Optional form submission feedback
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    alert("Thanks! We've received your message and will be in touch soon.");
-    this.reset();
-});
+  });
+  
+  // Prevent form default submission
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    this.reset(); // Just clears the form without showing a message
+  });
+  

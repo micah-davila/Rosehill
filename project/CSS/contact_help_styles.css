@@ -1,164 +1,140 @@
+/* Reset & Base */
 * {
     box-sizing: border-box;
-}
-
-.logo {
-    width: 150px;
-    cursor: pointer;
-  }
-  
-  .navbar ul {
-    text-align: right;
-  }
-  
-  .navbar ul li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #e6b140;
-    text-transform: uppercase;
-  }
-  
-  .center-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .center-text h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #e6b140;
-  
-  }
-
-.navbar ul li a {
-    text-decoration: none;
-    color: #e6b140;
-    text-transform: uppercase;
-    position: relative;
-  }
-  
-  .navbar ul li a::before {
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #da9008;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .navbar ul li a:hover::before {
-    transform: scaleX(1);
-  }
-  
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f1f4f8;
     margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
     color: #333;
-}
-
-.page-container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-header {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    background-color: #0066ff;
-    color: white;
-    padding: 12px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #004ecb;
-}
-
-.faq {
-    margin-bottom: 40px;
-}
-
-.faq-item {
-    margin-bottom: 15px;
-}
-
-.faq-question {
-    width: 100%;
-    text-align: left;
-    padding: 12px;
-    font-size: 1rem;
-    background: #f7f9fc;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    cursor: pointer;
-    outline: none;
-}
-
-.faq-answer {
-    display: none;
-    padding: 12px;
-    background-color: #eef3fb;
-    border: 1px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 6px 6px;
-}
-
-.more-info p, address {
-    margin: 10px 0;
-    line-height: 1.5;
-}
-
-.navbar {
-    width: 90%;
-    margin: auto;
-    padding: 35px 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #1f1f1f;
+    padding: 12px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    height: 45px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li a.active {
+    background-color: #444;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Page Header */
+  .page-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Contact Form */
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .contact-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* FAQ */
+  .faq {
+    margin: 40px 0;
+  }
+  
+  .faq-question {
+    background: #eef1f6;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+  }
+  
+  .faq-question::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    transition: transform 0.3s;
+  }
+  
+  .faq-question.open::after {
+    transform: rotate(180deg);
+  }
+  
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9fbfd;
+    padding: 0 12px;
+    transition: max-height 0.4s ease;
+    border-left: 4px solid #007bff;
+    margin-bottom: 15px;
+  }
+  
+  /* More Info */
+  .more-info p,
+  .more-info address {
+    margin: 10px 0;
   }
   
