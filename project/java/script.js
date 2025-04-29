@@ -1,22 +1,23 @@
-// Toggle FAQ visibility
-document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const answer = button.nextElementSibling;
-      const isOpen = answer.style.maxHeight;
-  
-      document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
-      document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('open'));
-  
-      if (!isOpen) {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-        button.classList.add('open');
-      }
-    });
+// FAQ Toggle functionality
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  question.addEventListener('click', () => {
+    const isExpanded = answer.style.display === 'block';
+    answer.style.display = isExpanded ? 'none' : 'block';
   });
-  
-  // Prevent form default submission
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    this.reset(); // Just clears the form without showing a message
-  });
-  
+});
+
+// Form validation (optional)
+const contactForm = document.getElementById('contactForm');
+contactForm.addEventListener('submit', (event) => {
+  const name = contactForm.name.value;
+  const email = contactForm.email.value;
+  const message = contactForm.message.value;
+
+  if (name === '' || email === '' || message === '') {
+    event.preventDefault();
+    alert('Please fill in all fields!');
+  }
+});
