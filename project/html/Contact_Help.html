@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact / Help</title>
+  <link rel="stylesheet" href="contact_help_styles.css" />
+</head>
+<body>
+
+  <!-- Clean Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <img src="../image/logo.png" alt="Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="Login.html">Login</a></li>
+        <li><a href="Create_Account.html">Create Account</a></li>
+        <li><a href="Shop.html">Shop</a></li>
+        <li><a href="Discounts.html">Discounts</a></li>
+        <li><a href="Contact_Help.html" class="active">Contact/Help</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <main class="container">
+
+    <header class="page-header">
+      <h1>Need Help? We're Here for You.</h1>
+      <p>Whether it's a question, comment, or concern — reach out!</p>
+    </header>
+
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <section class="faq">
+      <h2>Commonly Asked Questions</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">How often are discounts available?</button>
+        <div class="faq-answer">We typically offer discounts around holiday seasons and throughout the school year.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">What are different things that this company values?</button>
+        <div class="faq-answer">Our #1 priority is our customers, followed by the quality of our products.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">At what times can I get in contact with someone over the phone?</button>
+        <div class="faq-answer">You can do Live Chats on Mon–Fri from 9am–5pm EST.</div>
+      </div>
+    </section>
+
+    <section class="more-info">
+      <h2>Other Ways to Reach Us</h2>
+      <p><strong>Email:</strong> benslegacyguitars@gmail.com</p>
+      <p><strong>Phone:</strong> 1-713-492-3849</p>
+      <p><strong>Live Chat:</strong> Mon–Fri, 9am–5pm EST</p>
+      <address>
+        Customer Support Team<br />
+        19830 FM-2920<br />
+        Tomball, TX 77377<br />
+        USA
+      </address>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
